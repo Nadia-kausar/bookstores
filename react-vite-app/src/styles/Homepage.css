@@ -1,0 +1,281 @@
+/* ========== Homepage Base ========== */
+.homepage {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px 5%;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  padding: 80px 40px;
+  text-align: center;
+  background: linear-gradient(to bottom, #fff, #eaeaea);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.hero-title span {
+  color: #111;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* ========== Feature Cards ========== */
+.feature {
+  flex: 1 1 260px;
+  max-width: 300px;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ========== Featured Section ========== */
+.featured-section {
+  margin-top: 80px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+.featured-books {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.featured-book {
+  flex: 1 1 240px;
+  max-width: 280px;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-book:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-book-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.book-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.book-author {
+  font-size: 1rem;
+  color: #444;
+}
+
+.book-price {
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+}
+
+/* ========== Laptop Responsiveness ========== */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .homepage {
+    padding: 40px 3.5%;
+  }
+
+  .hero {
+    padding: 60px 32px;
+    border-radius: 18px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .hero-features {
+    gap: 28px;
+  }
+
+  .feature {
+    flex: 1 1 220px;
+    max-width: 260px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .feature h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature p {
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+    margin-bottom: 40px;
+  }
+
+  .featured-books {
+    gap: 28px;
+  }
+
+  .featured-book {
+    flex: 1 1 220px;
+    max-width: 260px;
+    padding: 20px;
+  }
+
+  .featured-book-image {
+    height: 260px;
+  }
+
+  .book-title {
+    font-size: 1.1rem;
+  }
+
+  .book-author {
+    font-size: 0.95rem;
+  }
+
+  .book-price {
+    font-size: 1rem;
+  }
+}
+
+/* ========== Tablet ========== */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .featured-book-image {
+    height: 260px;
+  }
+}
+
+/* ========== Mobile ========== */
+@media (max-width: 768px) {
+  .homepage {
+    padding: 30px 20px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-features,
+  .featured-books {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature,
+  .featured-book {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .featured-book-image {
+    height: 240px;
+  }
+}
+
+/* ========== Small Mobile ========== */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+  }
+
+  .feature p {
+    font-size: 0.9rem;
+  }
+
+  .book-title {
+    font-size: 1rem;
+  }
+
+  .book-author,
+  .book-price {
+    font-size: 0.95rem;
+  }
+}

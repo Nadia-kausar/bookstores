@@ -1,0 +1,130 @@
+
+/* AuthForm.css */
+
+/* Background and Centering */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #4b6cb7, #182848); /* Gradient background */
+  padding: 500px;
+  box-sizing: border-box;
+}
+
+/* Form Box */
+.auth-form {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Heading */
+.auth-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Input Fields */
+.auth-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus {
+  border-color: #4b6cb7;
+  outline: none;
+}
+
+/* Submit Button */
+.auth-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #4b6cb7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-form button[type="submit"]:hover {
+  background-color: #3a54a4;
+}
+
+/* Error or Success Message */
+.auth-form p {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Switch to Signup/Login Button */
+.switch-btn {
+  background: none;
+  border: none;
+  color: #4b6cb7;
+  font-size: 14px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.switch-btn:hover {
+  color: #3a54a4;
+}
+
+/* =============== Responsive Design =============== */
+
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .auth-form {
+    max-width: 90%;
+    padding: 35px 25px;
+  }
+  .auth-form h2 {
+    font-size: 24px;
+  }
+}
+
+/* Phones and small devices (max 768px) */
+@media screen and (max-width: 768px) {
+  .auth-form {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+  .auth-form h2 {
+    font-size: 22px;
+  }
+  .auth-form input,
+  .auth-form button[type="submit"] {
+    font-size: 15px;
+  }
+}
+
+/* Very small screens (max 480px) */
+@media screen and (max-width: 480px) {
+  .auth-form {
+    padding: 25px 15px;
+  }
+  .auth-form h2 {
+    font-size: 20px;
+  }
+  .switch-btn {
+    font-size: 13px;
+  }
+}

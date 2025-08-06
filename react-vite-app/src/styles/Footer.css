@@ -1,0 +1,309 @@
+/* === Base Footer === */
+.footer {
+  background-color: #0d0d0d;
+  color: #eaeaea;
+  padding: 60px 80px 40px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 -2px 8px rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+/* === Main Content Wrapper === */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1320px;
+  margin: 0 auto;
+  gap: 50px;
+  padding-bottom: 30px;
+}
+
+/* === Footer Section === */
+.footer-section {
+  flex: 1 1 320px;
+  min-width: 260px;
+  padding: 0 15px; /* Added horizontal padding for breathing room */
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #ffffff;
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 2px solid #444;
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.footer-section p {
+  color: #cccccc;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* === Links === */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* === Social Icons === */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-start; /* Left align social icons on larger screens */
+}
+
+.social-links span {
+  font-size: 1.4rem;
+  color: #bbb;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-links span:hover {
+  color: #ffffff;
+}
+
+/* === Footer Bottom === */
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #333;
+  font-size: 1rem;
+  color: #999;
+}
+
+/* === Tablet Screens (max-width: 1024px) === */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 40px 30px;
+  }
+
+  .footer-content {
+    gap: 40px;
+    max-width: 90%;
+  }
+
+  .footer-section {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 0 10px; /* reduced padding on smaller screens */
+  }
+
+  .footer-section h3 {
+    font-size: 1.35rem;
+  }
+
+  .social-links {
+    justify-content: center; /* center social icons on tablet */
+  }
+}
+
+/* === Mobile Screens (max-width: 768px) === */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-links a {
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* === Extra Small Devices (max-width: 400px) === */
+@media (max-width: 400px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+
+  .social-links span {
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}
+
+/* === Laptops: Small to Medium (1024px–1279px) === */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .footer {
+    padding: 60px 60px 45px; /* More balanced padding */
+  }
+
+  .footer-content {
+    max-width: 1140px;
+    gap: 50px; /* Increased gap for better spacing */
+  }
+
+  .footer-section {
+    flex: 1 1 30%; /* 3 columns of equal width */
+    max-width: 30%;
+    padding: 0 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.45rem;
+  }
+
+  .footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .footer-links a {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  .social-links span {
+    font-size: 1.45rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.95rem;
+    margin-top: 55px;
+    padding-top: 25px;
+  }
+}
+
+/* === Laptops: Large (1280px–1440px) === */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .footer {
+    padding: 70px 80px 50px;
+  }
+
+  .footer-content {
+    max-width: 1240px;
+    gap: 55px;
+  }
+
+  .footer-section {
+    flex: 1 1 28%;
+    max-width: 28%;
+    padding: 0 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.55rem;
+  }
+
+  .footer-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .footer-links a {
+    font-size: 1.05rem;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .social-links span {
+    font-size: 1.6rem;
+  }
+
+  .footer-bottom {
+    font-size: 1rem;
+    margin-top: 60px;
+    padding-top: 25px;
+  }
+}
+
+/* === Large Screens (1441px and up) === */
+@media (min-width: 1441px) {
+  .footer {
+    padding: 70px 100px 50px;
+  }
+
+  .footer-content {
+    max-width: 1400px;
+    gap: 60px;
+  }
+
+  .footer-section {
+    flex: 1 1 28%;
+    max-width: 28%;
+    padding: 0 25px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .footer-section p {
+    font-size: 1.1rem;
+  }
+
+  .footer-links a {
+    font-size: 1.05rem;
+  }
+
+  .social-links {
+    gap: 22px;
+  }
+
+  .social-links span {
+    font-size: 1.65rem;
+  }
+
+  .footer-bottom {
+    font-size: 1rem;
+  }
+}
