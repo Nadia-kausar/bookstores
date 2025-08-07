@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="logo" onClick={() => navigate('/')}>MyStore</div>
+        <div className="logo" onClick={() => navigate('/')}>BookHaven</div>
 
         <div
           className={`hamburger ${menuOpen ? 'open' : ''}`}
