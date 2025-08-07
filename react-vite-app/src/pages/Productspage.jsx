@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/productspage.css';
 
-const ProductsPage = ({ addToCart }) => {
+const ProductsPage = ({ cartItems, setCartItems }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/products/')
+    axios.get('http://127.0.0.1:8000/api/books/')
       .then(response => {
         setProducts(response.data);
       })
@@ -14,6 +14,28 @@ const ProductsPage = ({ addToCart }) => {
         console.error("Error fetching products:", error);
       });
   }, []);
+
+  const handleAddToCart = (product) => {
+    const existingItem = cartItems.find(item => item.id === product.id);
+
+    if (existingItem) {
+      const updatedCart = cartItems.map(item =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+      setCartItems(updatedCart);
+    } else {
+      const newItem = {
+        ...product,
+        quantity: 1,
+        image: product.cover_image // ensure image for CartPage
+      };
+      setCartItems([...cartItems, newItem]);
+    }
+
+    alert(`${product.title} added to cart!`);
+  };
 
   return (
     <div className="products-page">
@@ -23,26 +45,19 @@ const ProductsPage = ({ addToCart }) => {
       ) : (
         <div className="products-grid">
           {products.map(product => (
-            <div className="product-card" key={product._id || product.id}>
+            <div className="product-card" key={product.id}>
               <img
-                src={product.image}
+                src={product.cover_image || 'https://via.placeholder.com/150'}
                 alt={product.title}
                 className="product-image"
               />
               <h3 className="product-title">{product.title}</h3>
+              <p className="product-author">by {product.author || "Unknown"}</p>
               <p className="product-description">{product.description}</p>
               <p className="product-price">Rs {product.price}</p>
               <button
                 className="add-to-cart-btn"
-                onClick={() =>
-                  addToCart({
-                    id: product._id || product.id,
-                    title: product.title,
-                    price: product.price,
-                    image: product.image,
-                    author: product.author || "Unknown", // Optional
-                  })
-                }
+                onClick={() => handleAddToCart(product)}
               >
                 Add to Cart
               </button>

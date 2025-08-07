@@ -1,4 +1,4 @@
-/* General Layout */
+/* ========== General Layout ========== */
 .cart-page {
   padding: 3rem 1.5rem;
   background-color: #f4f6f8;
@@ -14,7 +14,7 @@
   color: #2c3e50;
 }
 
-/* Layout Container */
+/* ========== Layout Container ========== */
 .cart-container {
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +24,7 @@
   margin: 0 auto;
 }
 
-/* Cart Items */
+/* ========== Cart Items ========== */
 .cart-items {
   flex: 1 1 600px;
   max-width: 850px;
@@ -53,7 +53,7 @@
   border-radius: 10px;
 }
 
-/* Item Info */
+/* ========== Item Info ========== */
 .cart-item-info {
   flex: 1;
 }
@@ -76,7 +76,7 @@
   color: #000;
 }
 
-/* Controls */
+/* ========== Controls ========== */
 .cart-item-controls {
   display: flex;
   flex-direction: column;
@@ -119,7 +119,7 @@
   background-color: #c0392b;
 }
 
-/* Summary */
+/* ========== Cart Summary ========== */
 .cart-summary {
   flex: 0 1 320px;
   padding: 2rem;
@@ -159,11 +159,16 @@
   transition: background-color 0.3s ease;
 }
 
-.checkout-btn:hover {
+.checkout-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.checkout-btn:hover:not(:disabled) {
   background-color: #219150;
 }
 
-/* Empty Cart Message */
+/* ========== Empty Cart ========== */
 .empty-cart {
   text-align: center;
   padding: 5rem 1rem;
@@ -183,69 +188,82 @@
   color: #636e72;
 }
 
-/* Responsive Design */
+.continue-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #3498db;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.continue-link:hover {
+  text-decoration: underline;
+}
+
+/* ========== Responsive Design ========== */
 
 /* Laptop screens (1024px - 1366px) */
 @media (min-width: 1024px) and (max-width: 1366px) {
   .cart-container {
     gap: 3rem;
   }
-  
+
   .cart-items {
     flex: 1 1 650px;
     max-width: 700px;
   }
-  
+
   .cart-item {
     padding: 2rem;
     gap: 2rem;
   }
-  
+
   .cart-item-image {
     width: 130px;
     height: 180px;
   }
-  
+
   .cart-item-info h3 {
     font-size: 1.4rem;
   }
-  
+
   .cart-item-info p {
     font-size: 1.1rem;
   }
-  
+
   .cart-item-price {
     font-size: 1.2rem;
   }
-  
+
   .quantity-btn {
     padding: 8px 16px;
     font-size: 1.1rem;
   }
-  
+
   .quantity {
     font-size: 1.1rem;
   }
-  
+
   .remove-btn {
     font-size: 1rem;
     padding: 8px 16px;
   }
-  
+
   .cart-summary {
     flex: 0 1 350px;
     padding: 3rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   }
-  
+
   .cart-summary h3 {
     font-size: 1.8rem;
   }
-  
+
   .total {
     font-size: 1.5rem;
   }
-  
+
   .checkout-btn {
     font-size: 1.1rem;
     padding: 14px 0;

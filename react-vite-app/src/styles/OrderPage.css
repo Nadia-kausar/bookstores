@@ -1,52 +1,81 @@
-/* src/pages/OrderPage.css */
-
 .order-page-container {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 3rem auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0 20px;
-  color: #222;
+  padding: 0 20px 40px;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  color: #000;
 }
 
 .order-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 15px;
-  color: #0070f3;
+  margin-bottom: 1.5rem;
+  color: #000;
   text-align: center;
 }
 
-.order-message {
-  font-size: 1.15rem;
-  margin-bottom: 30px;
+.no-orders {
   text-align: center;
+  font-style: italic;
   color: #444;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+}
+
+.order-summary {
+  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  background: #fefefe;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.order-summary h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #111;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.order-meta {
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
 }
 
 .order-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 40px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+}
+
+.order-table thead tr {
+  background-color: #eee;
+  color: #000;
 }
 
 .order-table th,
 .order-table td {
   padding: 12px 15px;
   border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 
-.order-table th {
-  background-color: #0070f3;
-  color: white;
-  font-weight: 600;
-  text-align: left;
+.order-table th:last-child,
+.order-table td:last-child {
+  border-right: none;
 }
 
 .order-table tbody tr:hover {
-  background-color: #f0f8ff;
+  background-color: #f5f5f5;
+  transition: background-color 0.25s ease;
 }
 
 .center {
@@ -57,25 +86,43 @@
   text-align: right;
   font-feature-settings: 'tnum';
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .total-label {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   padding-top: 15px;
-  border-top: 2px solid #0070f3;
+  border-top: 2px solid #000;
+  color: #000;
 }
 
 .total-amount {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   padding-top: 15px;
-  border-top: 2px solid #0070f3;
+  border-top: 2px solid #000;
+  color: #000;
 }
 
-.thank-you-note {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #0070f3;
-  font-weight: 600;
+/* Responsive */
+@media (max-width: 600px) {
+  .order-page-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .order-summary {
+    padding: 1rem;
+  }
+
+  .order-table th,
+  .order-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .order-title {
+    font-size: 2rem;
+  }
 }
