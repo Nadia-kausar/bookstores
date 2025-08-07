@@ -1,21 +1,22 @@
 /* Root Variables */
 :root {
-  --primary-color: #00ffc3;
-  --bg-dark: #0d0d0d;
-  --text-light: #ffffff;
-  --card-bg: #1a1a1a;
-  --border-color: #333;
+  --primary-color: #00b894;
+  --bg-light: #f9f9f9;
+  --bg-white: #ffffff;
+  --text-dark: #1a1a1a;
+  --text-muted: #555;
+  --card-border: #ddd;
   --font-lg: 1.2rem;
   --font-xl: 1.6rem;
   --font-xxl: 2.4rem;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Base Page Styling */
 .products-page {
   padding: 4rem 2rem;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   box-sizing: border-box;
@@ -33,7 +34,7 @@
 .no-products {
   text-align: center;
   font-size: var(--font-lg);
-  color: #ccc;
+  color: var(--text-muted);
 }
 
 /* Grid Layout */
@@ -46,9 +47,9 @@
 
 /* Product Card Styling */
 .product-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
   padding: 1.5rem;
   width: 100%;
   max-width: 320px;
@@ -60,7 +61,7 @@
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 /* Product Image */
@@ -82,8 +83,8 @@
 
 /* Product Description */
 .product-description {
-  font-size: 0.9rem;
-  color: #bbb;
+  font-size: 0.95rem;
+  color: var(--text-muted);
   text-align: center;
   margin: 0.5rem 0;
   height: 48px;
@@ -102,7 +103,7 @@
 .add-to-cart-btn {
   padding: 0.6rem 1.2rem;
   background-color: var(--primary-color);
-  color: var(--bg-dark);
+  color: var(--bg-white);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -111,7 +112,7 @@
 }
 
 .add-to-cart-btn:hover {
-  background-color: #00cda2;
+  background-color: #009b77;
 }
 
 /* Responsive: Mobile First */
