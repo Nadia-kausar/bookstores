@@ -5,6 +5,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework import status
+from django.conf import settings
 
 from .models import Book, Order, OrderItem
 
@@ -66,7 +67,7 @@ def get_books(request):
             "description": book.description,
             "price": float(book.price),
             "stock": book.stock,
-            "cover_image": book.cover_image,
+            "cover_image": request.build_absolute_uri(book.cover_image.url) if book.cover_image else None
         }
         for book in books
     ]
@@ -126,6 +127,7 @@ def user_orders(request):
                 "quantity": item.quantity,
                 "price": float(item.book.price),
                 "subtotal": float(item.get_total),
+                "cover_image": request.build_absolute_uri(item.book.cover_image.url) if item.book.cover_image else None
             }
             for item in order.items.all()
         ]

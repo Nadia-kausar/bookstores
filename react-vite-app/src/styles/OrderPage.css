@@ -1,71 +1,100 @@
+/* ===== Page Container ===== */
 .order-page-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 3rem auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 0 20px 40px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
   color: #000;
+  animation: fadeIn 0.5s ease-in-out;
+  border: 1px solid #f0f0f0;
 }
 
+/* ===== Title ===== */
 .order-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #000;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
   text-align: center;
+  letter-spacing: 0.5px;
+  position: relative;
 }
 
+.order-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #00b894, #0984e3);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== No Orders ===== */
 .no-orders {
   text-align: center;
   font-style: italic;
-  color: #444;
-  margin-top: 3rem;
+  color: #888;
+  margin-top: 2rem;
   font-size: 1.1rem;
 }
 
+/* ===== Order Summary Card ===== */
 .order-summary {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   padding: 1.5rem 2rem;
-  border-radius: 10px;
-  background: #fefefe;
-  border: 1px solid #ccc;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #fafafa, #ffffff);
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.order-summary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+  border-color: #00b894;
 }
 
 .order-summary h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #111;
+  margin: 0 0 0.5rem;
+  color: #2d3436;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .order-meta {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   font-size: 0.95rem;
   color: #555;
   font-weight: 500;
 }
 
+/* ===== Order Table ===== */
 .order-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 1rem;
   border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .order-table thead tr {
-  background-color: #eee;
-  color: #000;
+  background: linear-gradient(90deg, #00b894, #0984e3);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }
 
 .order-table th,
 .order-table td {
   padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
 }
 
 .order-table th:last-child,
@@ -73,11 +102,15 @@
   border-right: none;
 }
 
-.order-table tbody tr:hover {
-  background-color: #f5f5f5;
+.order-table tbody tr {
   transition: background-color 0.25s ease;
 }
 
+.order-table tbody tr:hover {
+  background-color: #f1f8f6;
+}
+
+/* ===== Alignment Helpers ===== */
 .center {
   text-align: center;
 }
@@ -89,23 +122,30 @@
   white-space: nowrap;
 }
 
+/* ===== Totals ===== */
 .total-label {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   padding-top: 15px;
-  border-top: 2px solid #000;
-  color: #000;
+  border-top: 2px solid #ccc;
+  color: #2d3436;
 }
 
 .total-amount {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   padding-top: 15px;
-  border-top: 2px solid #000;
-  color: #000;
+  border-top: 2px solid #ccc;
+  color: #00b894;
 }
 
-/* Responsive */
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
 @media (max-width: 600px) {
   .order-page-container {
     margin: 1rem;
@@ -119,7 +159,7 @@
   .order-table th,
   .order-table td {
     padding: 8px 10px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 
   .order-title {
